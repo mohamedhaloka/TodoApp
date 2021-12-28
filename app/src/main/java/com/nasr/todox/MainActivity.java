@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         addTodoButton = findViewById(R.id.addTodoButton);
 
         addTodoButton.setOnClickListener(this);
@@ -59,8 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 todoAdapter.setNewData(todoItem);
             }
         });
-
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId() == R.id.addTodoButton)
         {
-
             dateText = "";
             titleText = "";
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -84,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             button.setOnClickListener(this);
 
 // Set up the buttons
-
 
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
@@ -114,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             builder.show();
 
             showDialog();
-
 
         }
     }
